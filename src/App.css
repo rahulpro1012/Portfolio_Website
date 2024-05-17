@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 
 
 html{
     background-color: #002244;
+    @apply scroll-smooth;
 }
 
 .highlight-text{
@@ -11,5 +17,57 @@ html{
 
 .font-asap-condensed {
     font-family: 'Asap Condensed', sans-serif;
-    font-size: 24px;
+    /*font-size: 24px;*/
+}
+
+.font-ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+   /* font-size: 18px; /* Adjust the font size as needed */
+    font-weight: 400; /* Adjust the font weight as needed */
+}
+
+.navbar:hover {
+    color: #00FA9A; 
   }
+
+  .navbar ul li.active {
+    color: #00FA9A;
+   }
+
+
+
+   .font-kalam {
+    font-family: 'Kalam', cursive;
+  }
+
+  .font-barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    background-color: #002244; /* Background color of the scrollbar track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #4d6685; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Radius of the scrollbar thumb */
+  }
+  
+  /* Styles for the scrollbar thumb when hovered */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #405c7a; /* Color of the scrollbar thumb when hovered */
+  }
+  
+  /* Styles for the scrollbar track when hovered */
+  ::-webkit-scrollbar-track:hover {
+    background-color: #002244; /* Background color of the scrollbar track when hovered */
+  }
+
+  body {
+    overflow-y: scroll; /* Always show scrollbar */
+    width: 100vw; /* Fix body width to prevent layout shifts */
+    margin: 0; /* Reset default margin */
+    overflow: auto;
+  }
+

@@ -4,8 +4,8 @@ import { Outlet } from 'react-router-dom'
 
 function Page() {
   return (
-    <div>
-        <Header/>
+    <div className='scroll-smooth flex flex-col w-screen h-screen'>  
+        <Header/>    
         <Outlet/>
     </div>
   )
