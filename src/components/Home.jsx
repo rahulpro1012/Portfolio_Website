@@ -21,12 +21,8 @@ function Home() {
           <li className='mb-2 highlight-text'><span className='text-gray-400'>Continuous Learning: Always exploring new tools and technologies to stay ahead of the curve.</span></li>  
           <li className='mb-2 highlight-text'><span className='text-gray-400'>Client-Centric Approach: Your goals are my priority. I work closely with you to understand your needs and exceed your expectations.</span></li>  
         </ul> 
-        <h1 className='text-xl'>📈 Let’s build something great together! Dive into my <span className='highlight-text'><Link to='/projects'>Projects</Link></span> to see the magic in action.
-
-</h1> 
+        <h1 className='text-xl '>📈 Let’s build something great together! Dive into my <span className='highlight-text'><Link to='/projects'>Projects</Link></span> to see the magic in action.</h1> 
       </div>
-
-
     </div>
   )
 }
