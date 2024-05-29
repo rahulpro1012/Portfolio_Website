@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div className='font-ubuntu font-bold text-gray-50 px-56 border border-red-500 font-poppins'>
+    <div className='font-ubuntu font-bold text-gray-50 px-56 border border-red-500 font-poppins py-28'>
       <div className='ml flex flex-col gap-6'>
         <h1 className='text-2xl'>Hi , my name is </h1>
         <h1 className='highlight-text text-6xl '>Rahul Mudaliar</h1>
