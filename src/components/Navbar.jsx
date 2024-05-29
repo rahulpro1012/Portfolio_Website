@@ -11,6 +11,11 @@ function Navbar() {
         })}>
           <li>HOME</li>
         </NavLink>
+        <NavLink exact to='/About' className="navbar" style={({ isActive }) => ({
+          color: isActive ? "#00FA9A" : "inherit"
+        })}>
+          <li>ABOUT ME</li>
+        </NavLink>
         <NavLink exact to='/projects' className="navbar" style={({ isActive }) => ({
           color: isActive ? "#00FA9A" : "inherit"
         })}>
