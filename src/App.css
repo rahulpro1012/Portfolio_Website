@@ -9,6 +9,8 @@
 html{
     background-color: #02283f;
     @apply scroll-smooth;
+    height: 100%;
+    overflow: auto;
 }
 
 .highlight-text{
@@ -64,14 +66,11 @@ html{
     background-color: #002244; /* Background color of the scrollbar track when hovered */
   }
 
-  body {
-    overflow-y: scroll; /* Always show scrollbar */
-    width: 100vw; /* Fix body width to prevent layout shifts */
-    margin: 0; /* Reset default margin */
-    overflow: auto;
-  }
 
   .font-poppins {
     font-family: 'Poppins', sans-serif;
   }
 
+  .nav-bg{
+    background-color: #02283f;
+  }
