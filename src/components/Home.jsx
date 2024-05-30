@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Email from "./Email";
+import { Link } from "react-scroll";
 
 function Home() {
   return (
-    <div className="">
+    <div className="h-full w-full">
       <div className=" text-gray-50 px-56 font-poppins py-8 ">
         <div className="ml flex flex-col gap-6">
           <h1 className="text-2xl font-bold">Hi , my name is </h1>
@@ -70,13 +69,12 @@ function Home() {
           <h1 className="text-xl ">
             📈 Let’s build something great together! Dive into my{" "}
             <span className="highlight-text">
-              <Link to="/projects">Projects</Link>
+              <Link to="projects">Projects</Link>
             </span>{" "}
             to see the magic in action.
           </h1>
         </div>
       </div>
-      <Email />
     </div>
   );
 }

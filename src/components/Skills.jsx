@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Skills() {
-  return (
-    <div>Skills</div>
-  )
+  return <div className="h-full w-full ">Skills</div>;
 }
 
-export default Skills
+export default Skills;

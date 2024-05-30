@@ -1,36 +1,71 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
     <div className="flex flex-row justify-between items-center p-4 nav-bg w-full fixed top-0 left-0 z-50">
       <h1 className="highlight-text text-white">Rahul</h1>
       <ul className="flex flex-row gap-16 text-lg text-white font-extralight mr-24 justify-end font-asap-condensed">
-        <NavLink exact to='/' className="navbar" style={({ isActive }) => ({
-          color: isActive ? "#00FA9A" : "inherit"
-        })}>
+        <Link
+          to="home"
+          smooth={true}
+          duration={1000}
+          className="navbar cursor-pointer"
+          activeClass="active"
+          spy={true}
+        >
           <li>HOME</li>
-        </NavLink>
-        <NavLink exact to='/About' className="navbar" style={({ isActive }) => ({
-          color: isActive ? "#00FA9A" : "inherit"
-        })}>
+        </Link>
+        <Link
+          to="aboutme"
+          smooth={true}
+          duration={1000}
+          className="navbar cursor-pointer"
+          activeClass="active"
+          spy={true}
+        >
           <li>ABOUT ME</li>
-        </NavLink>
-        <NavLink exact to='/projects' className="navbar" style={({ isActive }) => ({
-          color: isActive ? "#00FA9A" : "inherit"
-        })}>
+        </Link>
+        <Link
+          to="projects"
+          smooth={true}
+          duration={1000}
+          className="navbar cursor-pointer"
+          activeClass="active"
+          spy={true}
+        >
           <li>PROJECTS</li>
-        </NavLink>
-        <NavLink exact to='/skills' className="navbar" style={({ isActive }) => ({
-          color: isActive ? "#00FA9A" : "inherit"
-        })}>
+        </Link>
+        <Link
+          to="skills"
+          smooth={true}
+          duration={1000}
+          className="navbar cursor-pointer"
+          activeClass="active"
+          spy={true}
+        >
           <li>SKILLS</li>
-        </NavLink>
-        <NavLink exact to='/experience' className="navbar" style={({ isActive }) => ({
-          color: isActive ? "#00FA9A" : "inherit"
-        })}>
+        </Link>
+        <Link
+          to="experience"
+          smooth={true}
+          duration={1000}
+          className="navbar cursor-pointer"
+          activeClass="active"
+          spy={true}
+        >
           <li>EXPERIENCE</li>
-        </NavLink>
+        </Link>
+        <Link
+          to="email"
+          smooth={true}
+          duration={1000}
+          className="navbar cursor-pointer"
+          activeClass="active"
+          spy={true}
+        >
+          <li>CONTACT ME</li>
+        </Link>
       </ul>
     </div>
   );
