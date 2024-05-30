@@ -3,8 +3,8 @@ import { Link } from "react-scroll";
 
 function Home() {
   return (
-    <div className="h-full w-full">
-      <div className=" text-gray-50 px-56 font-poppins py-8 ">
+    <div className="h-full w-full py-8">
+      <div className=" text-gray-50 px-56 font-poppins ">
         <div className="ml flex flex-col gap-6">
           <h1 className="text-2xl font-bold">Hi , my name is </h1>
           <h1 className="highlight-text text-6xl font-semibold">

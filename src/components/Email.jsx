@@ -102,7 +102,7 @@ function Email() {
         </div>
         <button
           type="submit"
-          className="w-full py-2 px-4 nav-bg text-white font-medium rounded-md shadow-sm hover: focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300"
+          className="w-full py-2 px-4 nav-bg text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 button-hover-effect"
         >
           Send ✉
         </button>

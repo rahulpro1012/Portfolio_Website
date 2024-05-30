@@ -9,7 +9,7 @@ function Navbar() {
         <Link
           to="home"
           smooth={true}
-          duration={1000}
+          duration={100}
           className="navbar cursor-pointer"
           activeClass="active"
           spy={true}
@@ -19,7 +19,7 @@ function Navbar() {
         <Link
           to="aboutme"
           smooth={true}
-          duration={1000}
+          duration={100}
           className="navbar cursor-pointer"
           activeClass="active"
           spy={true}
@@ -29,7 +29,7 @@ function Navbar() {
         <Link
           to="projects"
           smooth={true}
-          duration={1000}
+          duration={100}
           className="navbar cursor-pointer"
           activeClass="active"
           spy={true}
@@ -39,7 +39,7 @@ function Navbar() {
         <Link
           to="skills"
           smooth={true}
-          duration={1000}
+          duration={100}
           className="navbar cursor-pointer"
           activeClass="active"
           spy={true}
@@ -49,7 +49,7 @@ function Navbar() {
         <Link
           to="experience"
           smooth={true}
-          duration={1000}
+          duration={100}
           className="navbar cursor-pointer"
           activeClass="active"
           spy={true}
@@ -59,7 +59,7 @@ function Navbar() {
         <Link
           to="email"
           smooth={true}
-          duration={1000}
+          duration={100}
           className="navbar cursor-pointer"
           activeClass="active"
           spy={true}
