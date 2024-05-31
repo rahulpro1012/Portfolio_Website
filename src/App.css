@@ -116,3 +116,7 @@ html{
 .button-hover-effect:hover::before {
   left: 100%;
 }
+
+.skills{
+  color: #FEBE10;
+}

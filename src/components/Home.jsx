@@ -69,7 +69,15 @@ function Home() {
           <h1 className="text-xl ">
             📈 Let’s build something great together! Dive into my{" "}
             <span className="highlight-text">
-              <Link to="projects">Projects</Link>
+              <Link
+                to="projects"
+                duration={100}
+                className="navbar cursor-pointer"
+                activeClass="active"
+                spy={true}
+              >
+                Projects
+              </Link>
             </span>{" "}
             to see the magic in action.
           </h1>

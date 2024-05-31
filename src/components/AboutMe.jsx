@@ -2,8 +2,8 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div className="about-bg text-gray-700 w-full h-full font-poppins py-12">
-      <h1 className="text-2xl font-semibold text-center p-14 underline underline-offset-8">
+    <div className="about-bg text-gray-700 w-full h-full font-poppins py-16">
+      <h1 className="text-2xl font-semibold text-center p-10 underline underline-offset-8">
         About Me
       </h1>
       <div className="flex flex-row">
