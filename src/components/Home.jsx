@@ -18,7 +18,7 @@ function Home() {
           </p>
 
           <div className="flex justify-center">
-            <button className="bg-light text-black font-poppins w-32 rounded-md shadow-lg  hover:bg-blue-200 transition-colors duration-300 h-11">
+            <button className="bg-light text-black font-poppins w-32 rounded-md shadow-lg font-[600] hover:bg-blue-200 transition-colors duration-300 h-11">
               View Resume
             </button>
           </div>

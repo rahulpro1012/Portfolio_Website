@@ -83,7 +83,7 @@ html{
   }
 
 
-/* Add this to your CSS file */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -118,5 +118,19 @@ html{
 }
 
 .skills{
-  color: #FEBE10;
+  background-color: #58b7f1;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.fill-progress {
+  width: var(--progress-width);
+  transition: width 1s ease-out;
 }
