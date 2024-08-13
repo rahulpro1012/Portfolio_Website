@@ -33,7 +33,7 @@ function Page() {
   }, []);
 
   return (
-    <div className="font-ubuntu min-w-full text-gray-50 min-h-screen">
+    <div className="font-ubuntu min-w-full text-gray-50 min-h-screen ">
       <Navbar />
       <div className="pt-16">
         <Element

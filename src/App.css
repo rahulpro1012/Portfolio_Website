@@ -131,6 +131,5 @@ html{
 }
 
 .fill-progress {
-  width: var(--progress-width);
-  transition: width 1s ease-out;
+  animation: fillProgress 1s ease-out forwards;
 }
