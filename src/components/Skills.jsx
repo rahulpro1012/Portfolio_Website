@@ -3,15 +3,15 @@ import SkillProgress from "./SkillProgress";
 
 const skills = [
   { skill: "HTML", percentage: 100 },
-  { skill: "CSS", percentage: 85 },
+  { skill: "CSS", percentage: 90 },
   { skill: "JavaScript", percentage: 90 },
   { skill: "Java", percentage: 95 },
   { skill: "SQL", percentage: 90 },
   { skill: "GO", percentage: 85 },
   { skill: "SpringBoot", percentage: 90 },
   { skill: "ReactJS", percentage: 90 },
-  { skill: "MySql", percentage: 90 },
-  { skill: "Postgres", percentage: 90 },
+  { skill: "Git | GitHub", percentage: 90 },
+  { skill: "CI | CD", percentage: 90 },
   // Add more skills as needed
 ];
 

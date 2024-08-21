@@ -8,7 +8,7 @@ function AboutMe() {
           <h1 className=" px-14 py-5 text-3xl font-semibold mb-10 underline underline-offset-8">
             About Me
           </h1>
-          <div className="px-14 flex flex-col gap-5">
+          <div className="lg:px-14 px-5 flex flex-col gap-5">
             <p>
               As a Full-Stack Developer, I specialize in creating dynamic and
               robust web applications using a wide array of technologies,

@@ -58,7 +58,7 @@ function Email() {
       </h2>
       <form
         onSubmit={handleSubmit}
-        className="w-2/3 bg-white p-8 rounded-lg shadow-2xl mt-5"
+        className="lg:w-2/3 bg-white p-8 rounded-lg shadow-2xl mt-5"
       >
         <div className="mb-4 lg:flex flex-row gap-4 ">
           <input

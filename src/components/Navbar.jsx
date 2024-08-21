@@ -3,9 +3,8 @@ import { Link } from "react-scroll";
 
 function Navbar() {
   return (
-    <div className="flex flex-row justify-between items-center p-4 nav-bg w-full fixed top-0 left-0 z-50">
-      <h1 className="highlight-text text-white">Rahul</h1>
-      <ul className="flex flex-row lg:gap-16 gap-3 lg:text-lg text-sm text-white font-extralight mr-24 justify-end font-asap-condensed">
+    <div className="flex flex-row lg:justify-center justify-center items-center p-4 nav-bg w-full fixed top-0 left-0 z-50">
+      <ul className="flex flex-row flex-wrap gap-3 lg:gap-16 text-sm lg:text-lg md:text-lg text-white font-extralight justify-center font-asap-condensed">
         <Link
           to="home"
           smooth={true}
