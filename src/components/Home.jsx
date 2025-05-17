@@ -4,7 +4,8 @@ import { Link } from "react-scroll";
 function Home() {
   function viewResume() {
     window.open(
-      "https://drive.google.com/file/d/1VkB-yq8pzAGFsMxqr7GOxKu52pVG39oE/view?usp=sharing"
+      // "https://drive.google.com/file/d/1VkB-yq8pzAGFsMxqr7GOxKu52pVG39oE/view?usp=sharing"
+      "https://drive.google.com/file/d/1OhfCkEokpVx4utiPbQ9IyieOaFIc_ofh/view?usp=sharing"
     );
   }
 

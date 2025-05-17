@@ -26,7 +26,7 @@ const SkillProgress = ({ skill, percentage }) => {
       <div className="relative h-4 bg-gray-200 rounded">
         <div
           ref={progressRef}
-          className="absolute top-0 left-0 h-4 rounded bg-blue-600"
+          className="absolute top-0 left-0 h-4 rounded lemon-yellow-bg"
           style={{
             width: "0%", // Initial width set to 0
           }}

@@ -7,7 +7,7 @@
 
 
 html{
-    background-color: #02283f;
+    background-color: #01243a;
     scroll-behavior: smooth;
     height: 100%;
     overflow: auto;
@@ -16,6 +16,24 @@ html{
 .highlight-text{
     color: #00FA9A;
 }
+
+.highlight-border {
+  border-color: #02a768;
+}
+
+.highlight-bg {
+  background-color: #018f58;
+}
+
+.lemon-yellow-bg{
+  background-color: #FFD700;
+}
+
+.lemon-yellow-border{
+  border-color: #FFD700;
+}
+
+
 
 .font-asap-condensed {
     font-family: 'Asap Condensed', sans-serif;
@@ -48,7 +66,7 @@ html{
 
   ::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
-    background-color: #002244; /* Background color of the scrollbar track */
+    background-color: #01243a; /* Background color of the scrollbar track */
   }
 
   ::-webkit-scrollbar-thumb {
@@ -63,7 +81,7 @@ html{
   
   /* Styles for the scrollbar track when hovered */
   ::-webkit-scrollbar-track:hover {
-    background-color: #002244; /* Background color of the scrollbar track when hovered */
+    background-color: #01243a; /* Background color of the scrollbar track when hovered */
   }
 
 
@@ -72,7 +90,7 @@ html{
   }
 
   .nav-bg{
-    background-color: #02283f;
+    background-color: #01243a;
   }
 
   .bg-light{
