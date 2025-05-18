@@ -2,12 +2,12 @@ import React from "react";
 
 const experienceData = [
   {
-    title: "Software Engineer",
-    company: "Cognizant",
-    url: "https://www.cognizant.com",
-    duration: "Sep 2024 – Present",
+    title: "Software Developer Intern",
+    company: "PayTabs",
+    url: "https://www.paytabs.com",
+    duration: "Jan 2024 – Jul 2024",
     description:
-      "Gained and Skilled in Salesforce Administration, Apex programming, Lightning Web Components (LWC), and Vlocity for industry-specific solutions.",
+      "Worked as a Full Stack Developer using Java, Spring Boot, MySQL, Go, and React.js on enterprise-grade solutions.",
   },
   {
     title: "Project Intern",
@@ -18,12 +18,12 @@ const experienceData = [
       "Skilled in Java, JavaScript, SQL and Gained experience in Salesforce Administration, Apex programming, Lightning Web Components (LWC), and Vlocity for industry-specific solutions.",
   },
   {
-    title: "Software Developer Intern",
-    company: "PayTabs",
-    url: "https://www.paytabs.com",
-    duration: "Jan 2024 – Jul 2024",
+    title: "Software Engineer",
+    company: "Cognizant",
+    url: "https://www.cognizant.com",
+    duration: "Sep 2024 – Present",
     description:
-      "Worked as a Full Stack Developer using Java, Spring Boot, MySQL, and React.js on enterprise-grade solutions.",
+      "Gained and Skilled in Salesforce Administration, Apex programming, Lightning Web Components (LWC), and Vlocity for industry-specific solutions.",
   },
 ];
 
