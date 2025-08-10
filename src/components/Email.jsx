@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
 function Email() {
   const [formData, setFormData] = useState({
@@ -30,11 +31,11 @@ function Email() {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Email sent successfully!");
+          toast.success("Email sent successfully!");
         },
         (error) => {
           console.log(error.text);
-          alert("Failed to send email. Please try again.");
+          toast.error("Failed to send email. Please try again.");
         }
       );
 
@@ -48,6 +49,7 @@ function Email() {
 
   return (
     <div className="lg:min-h-screen min-w-full bg-light min-h-44 font-poppins py-20 flex flex-col items-center justify-center">
+      <ToastContainer />
       <h1 className="text-3xl font-medium text-slate-700 mb-8">
         Let's Get In Touch!
       </h1>
