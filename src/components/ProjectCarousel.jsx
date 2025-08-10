@@ -20,7 +20,7 @@ const projects = [
     title: "Employee Management System",
     description:
       "A simple Employee Management application that demonstrates CRUD operations to add, view, update, and delete employee records.",
-    image: "/images/taskmanager.png",
+    image: "/images/home-page-employee.png",
     github:
       "https://github.com/rahulpro1012/Rahul_FInal_Project_backend/tree/master",
     technologies: [

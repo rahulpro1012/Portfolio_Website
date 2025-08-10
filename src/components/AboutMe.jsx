@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div className="about-bg text-gray-700 w-full min-h-screen font-poppins py-16">
+    <div className="about-bg text-gray-700 w-full min-h-screen font-poppins py-10">
       <div className="flex flex-col lg:flex-row min-h-screen">
         <div className="flex flex-col lg:w-1/2 p-10">
           <h1 className=" px-14 py-5 text-3xl font-semibold mb-10 underline underline-offset-8">
@@ -44,10 +44,9 @@ function AboutMe() {
         </div>
         <div className="relative lg:w-1/2 h-64 lg:h-auto lg:min-h-screen">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 lg:opacity-75"
+            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-75 object-cover object-center"
             style={{
-              backgroundImage:
-                "url(https://t3.ftcdn.net/jpg/06/88/80/98/240_F_688809823_w5me15D1SEuKLZR38E9SjPHxCJ28DVCH.jpg)",
+              backgroundImage: "url('/images/my_animated_image.png')",
             }}
           ></div>
         </div>
