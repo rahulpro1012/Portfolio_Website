@@ -19,8 +19,8 @@ A modern, responsive portfolio website built with **React**, **Vite**, and **Tai
 
 ## Screenshots
 
-![Home Page](public/images/home-page-employee.png)
-![Projects](public/images/sample-job.png)
+![Home Page](public/images/Portfolio_Home_Page.png)
+![Projects](public/images/Portfolio_projects.png)
 
 ## Getting Started
 
