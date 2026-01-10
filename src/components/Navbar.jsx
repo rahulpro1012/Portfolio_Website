@@ -21,7 +21,7 @@ function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const resumeLink =
-    "https://drive.google.com/file/d/1OhfCkEokpVx4utiPbQ9IyieOaFIc_ofh/view?usp=sharing";
+    "https://drive.google.com/file/d/1FCgxuala-05MWXUyxMSV-wzfve0iQurp/view?usp=sharing";
 
   const navLinks = [
     { id: "home", label: "Home" },
