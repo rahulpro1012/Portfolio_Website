@@ -1,18 +1,17 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Page from "./components/Page";
 import Notfound from "./components/Notfound";
-import "./index.css";
-import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Define router outside the component to prevent recreation on re-renders
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Page />,
+    errorElement: <Notfound />,
+  },
+]);
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Page />,
-      errorElement: <Notfound />,
-    },
-  ]);
-
   return <RouterProvider router={router} />;
 }
 

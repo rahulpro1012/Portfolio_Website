@@ -1,78 +1,47 @@
-import React, { useEffect } from "react";
-import { Element } from "react-scroll";
-import Home from "./Home";
-import AboutMe from "./AboutMe";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Experience from "./Experience";
+import { Suspense, lazy } from "react";
+import { ScrollRestoration } from "react-router-dom";
+
+// 1. Eager Load (Critical for First Paint)
 import Navbar from "./Navbar";
-import Email from "./Email";
+import Home from "./Home";
+
+// 2. Lazy Load (Load these chunks only when needed)
+const AboutMe = lazy(() => import("./AboutMe"));
+const Projects = lazy(() => import("./Projects"));
+const Experience = lazy(() => import("./Experience"));
+const Email = lazy(() => import("./Email"));
+
+// 3. Sleek Loading Spinner (Shown while sections load)
+const SectionLoader = () => (
+  <div className="w-full h-96 flex items-center justify-center bg-primary">
+    <div className="flex flex-col items-center gap-4">
+      {/* Spinning Circle */}
+      <div className="w-12 h-12 border-4 border-secondary border-t-accent rounded-full animate-spin"></div>
+      <p className="text-textMuted text-sm font-mono animate-pulse">
+        Loading content...
+      </p>
+    </div>
+  </div>
+);
 
 function Page() {
-  useEffect(() => {
-    const sections = document.querySelectorAll(".section");
-    const options = {
-      root: null,
-      threshold: 0.1,
-      rootMargin: "0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fadeIn");
-        } else {
-          entry.target.classList.remove("animate-fadeIn");
-        }
-      });
-    }, options);
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  }, []);
-
   return (
-    <div className="font-ubuntu min-w-full text-gray-50 min-h-screen ">
+    <div className="font-sans antialiased text-textMain bg-primary transition-colors duration-300 selection:bg-accent selection:text-white">
+      <ScrollRestoration />
       <Navbar />
-      <div className="pt-16">
-        <Element
-          name="home"
-          className="section min-h-screen flex items-center justify-center"
-        >
-          <Home />
-        </Element>
-        <Element
-          name="aboutme"
-          className="section min-h-screen flex items-center justify-center"
-        >
+
+      <main className="flex flex-col w-full overflow-hidden">
+        {/* Render Home Immediately */}
+        <Home />
+
+        {/* Wrap the rest in Suspense */}
+        <Suspense fallback={<SectionLoader />}>
           <AboutMe />
-        </Element>
-        <Element
-          name="projects"
-          className="section min-h-screen flex items-center justify-center"
-        >
           <Projects />
-        </Element>
-        <Element
-          name="skills"
-          className="section min-h-screen flex items-center justify-center"
-        >
-          <Skills />
-        </Element>
-        <Element
-          name="experience"
-          className="section min-h-screen flex items-center justify-center"
-        >
           <Experience />
-        </Element>
-        <Element
-          name="email"
-          className="section min-h-screen flex items-center justify-center"
-        >
           <Email />
-        </Element>
-      </div>
+        </Suspense>
+      </main>
     </div>
   );
 }
