@@ -4,11 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class", // <--- CRITICAL: Enables class-based toggling
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        // These link to the CSS variables in index.css
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         secondary: "rgb(var(--color-secondary) / <alpha-value>)",
         textMain: "rgb(var(--color-text-main) / <alpha-value>)",
@@ -17,12 +16,11 @@ export default {
         border: "rgb(var(--color-border) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], 
-        heading: ['Poppins', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       animation: {
-        'bounce-slow': 'bounce 3s infinite',
         'fadeIn': 'fadeIn 1s ease-out forwards',
+        'bounce-slow': 'bounce 3s infinite',
       },
       keyframes: {
         fadeIn: {

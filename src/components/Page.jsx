@@ -1,49 +1,40 @@
-import React, { useEffect, Suspense } from "react";
+import { Suspense, lazy } from "react";
+import { ScrollRestoration } from "react-router-dom";
+
+// 1. Eager Load (Critical for First Paint)
 import Navbar from "./Navbar";
 import Home from "./Home";
 
-// Lazy load other sections
-const AboutMe = React.lazy(() => import("./AboutMe"));
-const Projects = React.lazy(() => import("./Projects"));
-const Experience = React.lazy(() => import("./Experience"));
-const Email = React.lazy(() => import("./Email"));
+// 2. Lazy Load (Load these chunks only when needed)
+const AboutMe = lazy(() => import("./AboutMe"));
+const Projects = lazy(() => import("./Projects"));
+const Experience = lazy(() => import("./Experience"));
+const Email = lazy(() => import("./Email"));
 
+// 3. Sleek Loading Spinner (Shown while sections load)
 const SectionLoader = () => (
-  <div className="flex items-center justify-center w-full min-h-[50vh] text-slate-500">
-    Loading...
+  <div className="w-full h-96 flex items-center justify-center bg-primary">
+    <div className="flex flex-col items-center gap-4">
+      {/* Spinning Circle */}
+      <div className="w-12 h-12 border-4 border-secondary border-t-accent rounded-full animate-spin"></div>
+      <p className="text-textMuted text-sm font-mono animate-pulse">
+        Loading content...
+      </p>
+    </div>
   </div>
 );
 
 function Page() {
-  // Your existing Fade-in logic
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fadeIn");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="font-sans min-w-full bg-primary text-slate-200 min-h-screen selection:bg-sky-400/30">
+    <div className="font-sans antialiased text-textMain bg-primary transition-colors duration-300 selection:bg-accent selection:text-white">
+      <ScrollRestoration />
       <Navbar />
 
-      {/* CRITICAL FIX: 
-         Removed <Element> wrappers. 
-         The IDs are now inside the components themselves.
-      */}
-      <main>
+      <main className="flex flex-col w-full overflow-hidden">
+        {/* Render Home Immediately */}
         <Home />
 
+        {/* Wrap the rest in Suspense */}
         <Suspense fallback={<SectionLoader />}>
           <AboutMe />
           <Projects />
