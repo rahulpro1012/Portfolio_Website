@@ -15,7 +15,10 @@ function Home() {
     "https://drive.google.com/file/d/1OhfCkEokpVx4utiPbQ9IyieOaFIc_ofh/view?usp=sharing";
 
   return (
-    <section className="relative w-full flex flex-col justify-center font-sans py-20 min-h-screen">
+    <section
+      id="home"
+      className="relative w-full flex flex-col justify-center font-sans py-20 min-h-screen"
+    >
       <div className="absolute top-[-10%] right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-20">
