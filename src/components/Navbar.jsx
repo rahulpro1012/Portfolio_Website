@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaDownload, FaSun, FaMoon } from "react-icons/fa"; // Import Sun/Moon
+import { FaDownload, FaSun, FaMoon } from "react-icons/fa";
+import Logo from "./Logo"; // Import your new Logo
 
 function Navbar() {
-  // 1. Theme State Management
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to Dark
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  // 2. Apply theme to HTML tag on mount and toggle
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
@@ -31,16 +30,16 @@ function Navbar() {
   ];
 
   return (
-    // Updated: Use 'bg-primary/80' so it adapts to light/dark automatically
     <nav className="fixed top-0 left-0 w-full z-50 bg-primary/80 backdrop-blur-md border-b border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* --- BRAND LOGO --- */}
           <div
-            className="flex-shrink-0 cursor-pointer text-accent font-bold text-xl tracking-tighter"
-            onClick={() => window.scrollTo(0, 0)}
+            className="flex-shrink-0 cursor-pointer group"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            RM<span className="text-textMain">.</span>
+            {/* The SVG Logo scales perfectly here */}
+            <Logo className="h-10 w-10 stroke-accent group-hover:stroke-textMain transition-all duration-300" />
           </div>
 
           {/* Links */}
@@ -68,7 +67,6 @@ function Navbar() {
 
           {/* Right Side: Resume + Theme Toggle */}
           <div className="hidden md:flex items-center gap-4">
-            {/* THEME TOGGLE BUTTON */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-secondary border border-border text-accent hover:scale-110 transition-transform shadow-sm"
