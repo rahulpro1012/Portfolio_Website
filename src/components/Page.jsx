@@ -5,7 +5,6 @@ import Home from "./Home";
 // Lazy load other sections
 const AboutMe = React.lazy(() => import("./AboutMe"));
 const Projects = React.lazy(() => import("./Projects"));
-const Skills = React.lazy(() => import("./Skills"));
 const Experience = React.lazy(() => import("./Experience"));
 const Email = React.lazy(() => import("./Email"));
 
@@ -48,7 +47,6 @@ function Page() {
         <Suspense fallback={<SectionLoader />}>
           <AboutMe />
           <Projects />
-          <Skills />
           <Experience />
           <Email />
         </Suspense>

@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* THEME ENGINE */
+@layer base {
+  :root {
+    /* --- LIGHT MODE COLORS (Default) --- */
+    --color-primary: 248 250 252;   /* Slate 50 (Background) */
+    --color-secondary: 255 255 255; /* White (Cards) */
+    --color-text-main: 15 23 42;    /* Slate 900 (Headings) */
+    --color-text-muted: 71 85 105;  /* Slate 600 (Paragraphs) */
+    --color-accent: 2 132 199;      /* Sky 600 (Darker Blue for contrast on white) */
+    --color-border: 226 232 240;    /* Slate 200 */
+  }
+
+  .dark {
+    /* --- DARK MODE COLORS (Obsidian Theme) --- */
+    --color-primary: 15 23 42;      /* Slate 900 */
+    --color-secondary: 30 41 59;    /* Slate 800 */
+    --color-text-main: 241 245 249; /* Slate 100 */
+    --color-text-muted: 148 163 184;/* Slate 400 */
+    --color-accent: 56 189 248;     /* Sky 400 (Neon Blue) */
+    --color-border: 51 65 85;       /* Slate 700 */
+  }
+
+  body {
+    @apply bg-primary text-textMain transition-colors duration-300;
+  }
+}
+
+/* --- AUTOFILL FIX (Updated for Variables) --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(var(--color-text-main));
+  -webkit-box-shadow: 0 0 0px 1000px rgb(var(--color-secondary)) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-primary)); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-accent)); 
+  border-radius: 4px;
+}

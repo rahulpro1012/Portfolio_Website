@@ -1,7 +1,24 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaDownload } from "react-icons/fa"; // Import download icon
+import { FaDownload, FaSun, FaMoon } from "react-icons/fa"; // Import Sun/Moon
 
 function Navbar() {
+  // 1. Theme State Management
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to Dark
+
+  // 2. Apply theme to HTML tag on mount and toggle
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   const resumeLink =
     "https://drive.google.com/file/d/1OhfCkEokpVx4utiPbQ9IyieOaFIc_ofh/view?usp=sharing";
 
@@ -9,27 +26,26 @@ function Navbar() {
     { id: "home", label: "Home" },
     { id: "aboutme", label: "About" },
     { id: "projects", label: "Projects" },
-    { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "email", label: "Contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+    // Updated: Use 'bg-primary/80' so it adapts to light/dark automatically
+    <nav className="fixed top-0 left-0 w-full z-50 bg-primary/80 backdrop-blur-md border-b border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* 1. LOGO (Optional but looks professional) */}
-          {/* If you don't have a logo, your initials in a customized font work great */}
+          {/* Logo */}
           <div
-            className="flex-shrink-0 cursor-pointer text-sky-400 font-bold text-xl tracking-tighter"
+            className="flex-shrink-0 cursor-pointer text-accent font-bold text-xl tracking-tighter"
             onClick={() => window.scrollTo(0, 0)}
           >
-            RM<span className="text-slate-100">.</span>
+            RM<span className="text-textMain">.</span>
           </div>
 
-          {/* 2. NAVIGATION LINKS (Centered) */}
+          {/* Links */}
           <div className="hidden md:block">
-            <ul className="flex flex-row gap-8 text-sm font-medium text-slate-400">
+            <ul className="flex flex-row gap-8 text-sm font-medium text-textMuted">
               {navLinks.map((link) => (
                 <li key={link.id}>
                   <Link
@@ -38,32 +54,38 @@ function Navbar() {
                     duration={500}
                     spy={true}
                     offset={-100}
-                    activeClass="text-sky-400 font-semibold"
-                    className="cursor-pointer hover:text-sky-300 transition-colors duration-300 relative group"
+                    activeClass="text-accent font-semibold"
+                    className="cursor-pointer hover:text-accent transition-colors duration-300 relative group"
                     href={`#${link.id}`}
                   >
                     {link.label}
-                    {/* Hover Underline Animation */}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* 3. RESUME BUTTON (Right Aligned) */}
-          <div className="hidden md:block">
+          {/* Right Side: Resume + Theme Toggle */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* THEME TOGGLE BUTTON */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-secondary border border-border text-accent hover:scale-110 transition-transform shadow-sm"
+              aria-label="Toggle Theme"
+            >
+              {isDarkMode ? <FaSun size={16} /> : <FaMoon size={16} />}
+            </button>
+
             <a
               href={resumeLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-sky-900 bg-sky-400 rounded hover:bg-sky-300 transition-all shadow-[0_0_10px_rgba(56,189,248,0.3)]"
+              className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-accent rounded hover:opacity-90 transition-all shadow-lg shadow-accent/20"
             >
               Resume <FaDownload size={10} />
             </a>
           </div>
-
-          {/* Mobile Menu Icon would go here (We can add this later if needed) */}
         </div>
       </div>
     </nav>
