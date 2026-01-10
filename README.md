@@ -1,114 +1,126 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Showcases your projects, skills, experience, and provides a contact form for collaboration opportunities.
+A modern, high-performance portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Designed for speed and SEO, it features a custom theme engine, lazy-loaded components, and a scalable architecture.
+
+## Version 2 Updates (Jan 2026)
+
+- **Architecture:** Rebuilt using a modular "Page" layout with code-splitting (`React.lazy`) for faster load times.
+- **Theme Engine:** Fully dynamic Light/Dark mode using CSS variables and Tailwind.
+- **Performance:** Added custom `useOnScreen` hook for scroll-based animations without external heavy libraries.
+- **SEO:** Optimized metadata, Open Graph tags, and semantic HTML structure.
 
 ## Features
 
-- ⚡ Fast and optimized with Vite
-- 🎨 Styled with Tailwind CSS and custom CSS
-- 📱 Responsive design for all devices
-- 🧑‍💻 Project carousel with details and GitHub links
-- 🛠️ Skills section with animated progress bars
-- 💼 Professional experience timeline
-- 📧 Contact form powered by EmailJS
-- 🔗 Smooth scrolling navigation
+- ⚡ **Fast & Optimized:** Built with Vite for instant HMR and optimized production builds.
+- 🎨 **Dynamic Theming:** Custom CSS variable-based Light/Dark mode with smooth transitions.
+- 📱 **Responsive Design:** Mobile-first approach scaling perfectly to 4K screens.
+- 🛠️ **Lazy Loading:** Critical path rendering with `Suspense` for heavy sections.
+- 💼 **Experience Timeline:** Interactive timeline showcasing professional history.
+- 📧 **Contact Form:** Integrated EmailJS with real-time validation and toast notifications.
+- 🔗 **Smooth Navigation:** Scroll-based navigation with active state tracking.
 
 ## Demo
 
-[Live Demo](https://rahul-mudaliar-portfolio.vercel.app)
+[**Live Demo**](https://rahul-mudaliar-portfolio.vercel.app)
 
 ## Screenshots
 
-![Home Page](public/images/Portfolio_home_page.png)
-![Projects](public/images/portfolio_projects.png)
+<table>
+  <tr>
+    <th width="50%">Version 1 (Legacy)</th>
+    <th width="50%">Version 2 (Current - Jan 2026)</th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="public/images/Portfolio_home_page.png" alt="V1 Home" width="100%" />
+      <br/><br/>
+    </td>
+    <td valign="top">
+      <img src="public/preview-image.png" alt="V2 Home" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ## Getting Started
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v16+ recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/)
 
 ### Installation
 
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone [https://github.com/rahulpro1012/portfolio-website.git](https://github.com/rahulpro1012/portfolio-website.git)
    cd portfolio-website
    ```
 
-2. **Install dependencies:**
+   # Portfolio Website
 
-   ```sh
-   npm install
-   # or
-   yarn install
+   A modern, high-performance portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Designed for speed and SEO, it features a custom theme engine, lazy-loaded components, and a scalable architecture.
+
+   ## Project Structure
+
+   ```text
+   src/
+   ├── components/    # UI Components
+   │   ├── Home.jsx   # Hero Section (Eager Loaded)
+   │   ├── Navbar.jsx # Fixed Navigation
+   │   ├── Page.jsx   # Main Layout & Lazy Loading Logic
+   │   ├── Projects.jsx # Projects Grid/Carousel
+   │   └── ...        # Other sections (About, Experience, Email)
+   ├── hooks/         # Custom Hooks
+   │   └── useOnScreen.js # Intersection Observer for scroll animations
+   ├── assets/        # Static local assets
+   ├── main.jsx       # Application Entry Point
+   ├── index.css      # Theme Variables & Tailwind Directives
+   └── App.jsx        # Routing Configuration
+   public/
+   ├── logo.svg       # Browser Tab Icon
+   └── preview-image.png # Social Media Share Image
    ```
 
-3. **Start the development server:**
+   ## Configuration
 
-   ```sh
-   npm run dev
-   # or
-   yarn dev
+   1. Theme Colors
+      Theming is handled via CSS Variables in `src/index.css`. Change these values to update the color scheme globally:
+
+   ```css
+   :root {
+     /* Light Mode */
+     --color-primary: 248 250 252;
+     --color-accent: 2 132 199;
+   }
+   .dark {
+     /* Dark Mode */
+     --color-primary: 15 23 42;
+     --color-accent: 56 189 248;
+   }
    ```
 
-4. **Open your browser:**
-   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+   2. EmailJS Setup
+      To enable the contact form, create an account on EmailJS and update the credentials in `src/components/Email.jsx`:
 
-### Build for Production
+   ```javascript
+   emailjs.sendForm(
+     "YOUR_SERVICE_ID",
+     "YOUR_TEMPLATE_ID",
+     form.current,
+     "YOUR_PUBLIC_KEY"
+   );
+   ```
 
-```sh
-npm run build
-# or
-yarn build
-```
+   3. SEO & Metadata
+      Update the `<title>`, `<meta name="description">`, and `<meta name="keywords">` tags in `index.html` to match your profile.
 
-### Preview Production Build
+   ## Dependencies
 
-```sh
-npm run preview
-# or
-yarn preview
-```
+   - Core: React, Vite
+   - Styling: Tailwind CSS, PostCSS
+   - Routing: React Router DOM
+   - Utilities: React Icons, React Toastify, EmailJS
+   - Animations: CSS Keyframes & Intersection Observer API
 
-## Project Structure
-
-```
-src/
-  components/      # React components (Home, AboutMe, Projects, Skills, etc.)
-  assets/          # Static assets
-  App.jsx          # Main app component
-  main.jsx         # Entry point
-  App.css          # Custom styles
-  index.css        # Tailwind base styles
-public/
-  images/          # Project and profile images
-```
-
-## Configuration
-
-- **Tailwind CSS:** See [`tailwind.config.js`](tailwind.config.js)
-- **Vite:** See [`vite.config.js`](vite.config.js)
-- **EmailJS:** Update your service/template/user IDs in [`src/components/Email.jsx`](src/components/Email.jsx)
-
-## Customization
-
-- Update your personal info, skills, and experience in the respective components in [`src/components/`](src/components/)
-- Add or replace images in [`public/images/`](public/images/)
-- Change theme colors in [`src/App.css`](src/App.css) and Tailwind config
-
-## Dependencies
-
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [react-slick](https://react-slick.neostack.com/) (carousel)
-- [react-scroll](https://www.npmjs.com/package/react-scroll) (smooth scrolling)
-- [react-toastify](https://fkhadra.github.io/react-toastify/) (notifications)
-- [EmailJS](https://www.emailjs.com/) (contact form)
-
----
-
-Made with ❤️ by Rahul Mudaliar
+   Made with ❤️ by Rahul Mudaliar
