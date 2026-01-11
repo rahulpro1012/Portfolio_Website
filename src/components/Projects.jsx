@@ -118,6 +118,7 @@ function ProjectCard({ project, index }) {
           src={project.image}
           alt={project.title}
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 filter brightness-75 group-hover:brightness-100"
+          loading="lazy"
         />
 
         {/* Overlay with Buttons */}
