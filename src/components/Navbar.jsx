@@ -92,6 +92,7 @@ function Navbar() {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-secondary border border-border text-accent"
+              aria-label="Toggle Dark Mode"
             >
               {isDarkMode ? <FaSun size={16} /> : <FaMoon size={16} />}
             </button>

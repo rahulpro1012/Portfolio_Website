@@ -87,6 +87,7 @@ function Home() {
 
           <Link
             to="projects"
+            href="#projects"
             smooth={true}
             duration={500}
             offset={-100}

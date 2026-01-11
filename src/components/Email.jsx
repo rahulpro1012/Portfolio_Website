@@ -153,9 +153,18 @@ function Email() {
               <SocialIcon
                 href="https://github.com/rahulpro1012"
                 icon={<FaGithub />}
+                label="GitHub Profile"
               />
-              <SocialIcon href="https://linkedin.com" icon={<FaLinkedin />} />
-              <SocialIcon href="https://twitter.com" icon={<FaTwitter />} />
+              <SocialIcon
+                href="https://www.linkedin.com/in/rahul-mudaliar/"
+                icon={<FaLinkedin />}
+                label="LinkedIn Profile"
+              />
+              <SocialIcon
+                href="https://twitter.com"
+                icon={<FaTwitter />}
+                label="Twitter Profile"
+              />
             </div>
           </div>
 
@@ -299,7 +308,7 @@ function Email() {
         <div className="mt-20 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left text-textMuted text-sm font-mono">
             <p>Designed & Built by Rahul Mudaliar</p>
-            <p className="mt-1 text-xs opacity-60">
+            <p className="mt-1 text-xs text-textMuted">
               © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
@@ -326,13 +335,14 @@ const ErrorMessage = ({ msg }) => (
   </p>
 );
 
-function SocialIcon({ href, icon }) {
+function SocialIcon({ href, icon, label }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="w-12 h-12 flex items-center justify-center rounded-full bg-secondary border border-border text-textMuted hover:text-accent hover:border-accent hover:-translate-y-1 transition-all duration-300"
+      aria-label={label}
     >
       {icon}
     </a>
