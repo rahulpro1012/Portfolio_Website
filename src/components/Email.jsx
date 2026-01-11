@@ -154,7 +154,10 @@ function Email() {
                 href="https://github.com/rahulpro1012"
                 icon={<FaGithub />}
               />
-              <SocialIcon href="https://linkedin.com" icon={<FaLinkedin />} />
+              <SocialIcon
+                href="https://www.linkedin.com/in/rahul-mudaliar/"
+                icon={<FaLinkedin />}
+              />
               <SocialIcon href="https://twitter.com" icon={<FaTwitter />} />
             </div>
           </div>
