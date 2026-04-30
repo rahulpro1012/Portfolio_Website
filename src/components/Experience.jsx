@@ -2,29 +2,21 @@ import { FaBriefcase, FaCalendarAlt } from "react-icons/fa";
 
 const experiences = [
   {
-    role: "Software Engineer",
+    role: "Junior Software Engineer",
     company: "Cognizant (Pune)",
     period: "Sept 2024 - Present",
-    // Combined your bullets into a strong SDE narrative
     description:
-      "Engineered scalable enterprise modules using Apex (OOP) and Lightning Web Components, adhering to strict MVC patterns and modern web standards. Designed and implemented REST API integrations to synchronize real-time data between external systems (DocuSign, Workday) and optimized asynchronous backend processes (Batch Jobs) to handle large data volumes.",
-    // Key SDE skills extracted from your text
-    skills: [
-      "Java (Apex)",
-      "JavaScript",
-      "REST APIs",
-      "System Design",
-      "Async Processing",
-    ],
+      "Engineered robust web applications and microservices using Java, Spring Boot, and Spring Data JPA. Designed secure REST API integrations for third-party platforms like DocuSign and Workday, and significantly improved backend performance by optimizing PostgreSQL queries and schema designs for high-volume transactions.",
+    skills: ["Java", "Spring Boot", "PostgreSQL", "Microservices", "REST APIs"],
     highlight: true,
   },
   {
-    role: "CSD Intern",
+    role: "Project Intern",
     company: "Cognizant (Coimbatore)",
     period: "July 2024 - Sept 2024",
     description:
-      "Completed intensive training in Full Stack principles including Java, SQL, and JavaScript within an Agile environment. Acquired foundational skills in enterprise development lifecycles, CI/CD pipelines, and component-based architecture.",
-    skills: ["Java", "SQL", "JavaScript", "CI/CD", "Agile"],
+      "Developed full-stack POC applications using Java, Spring Boot, and JavaScript within Agile sprints. Applied core OOP design patterns and established rigorous testing standards using JUnit 5 and Mockito to achieve 75% code coverage, gaining hands-on exposure to CI/CD workflows.",
+    skills: ["Java", "Spring Boot", "JavaScript", "JUnit/Mockito", "Agile"],
     highlight: false,
   },
   {
@@ -32,8 +24,8 @@ const experiences = [
     company: "Paytabs Global (Chennai)",
     period: "Jan 2024 - July 2024",
     description:
-      "Developed enterprise-grade backend services using Java and Spring Boot, implementing secure RESTful endpoints for global payment processing. Built a high-performance automated reporting system using Go (Golang) and SQL, reducing report generation time by approx. 40% to enhance operational efficiency.",
-    skills: ["Java", "Spring Boot", "Go (Golang)", "SQL", "Microservices"],
+      "Designed enterprise-grade backend services for global payment processing using Java and Spring Boot. Architected a high-performance internal reporting tool in Go (Golang) to automate monthly reports, and optimized MySQL database queries to resolve bottlenecks and improve API response times.",
+    skills: ["Java", "Spring Boot", "Go (Golang)", "MySQL", "API Optimization"],
     highlight: false,
   },
 ];

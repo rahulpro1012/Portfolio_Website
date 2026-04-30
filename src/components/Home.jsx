@@ -12,7 +12,7 @@ import { VscAzure } from "react-icons/vsc";
 
 function Home() {
   const resumeLink =
-    "https://drive.google.com/file/d/1vEa5Cgc41XMSW8ygVnTZpCk9k-nckIL5/view?usp=sharing";
+    "https://drive.google.com/file/d/1zzkaCpDBe9Q3DdK_nNPFXAsWdkFiNgHd/view?usp=sharing";
 
   return (
     <section
